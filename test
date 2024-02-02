@@ -1,0 +1,78 @@
+class Etudiant {
+    protected int id;
+    protected String nom;
+    protected double moy;
+
+    public Etudiant (int id,String nom,double moy){
+        this.id=id;
+        this.nom=nom;
+        this.moy=moy;
+    }
+    String tostring(){
+        return String.valueOf(id)+nom+String.valueOf(moy);
+    }
+
+    public int getId(){
+        return id;
+    }
+    public void setId(int id){
+        this.id=id;
+    }
+
+    public String getNom(){
+        return nom;
+    }
+    public void setNom(String nom){
+        this.nom=nom;
+    }
+
+    public double getMoy(){
+        return moy;
+    }
+    public void setMoy(double moy){
+        this.moy=moy;
+    }
+
+ }
+class ing extends Etudiant{
+    String stage1,stage2;
+    public ing(int id,String nom,double moy,String stage1,String stage2){
+    super(id,nom,moy);
+    this.stage1=stage1;
+    this.stage2=stage2;
+}
+String tostring(){
+    return String.valueOf(id)+nom+String.valueOf(moy)+stage1+stage2;
+}
+
+}
+
+class lmd extends Etudiant{
+    String pfe;
+    lmd(int id,String nom,double moy,String lmd){
+        super(id,nom,moy);
+        this.pfe=pfe;
+    }
+    String tostring(){
+        return String.valueOf(id)+nom+String.valueOf(moy)+pfe;
+    }
+    
+}
+class  Test {
+    public static void main(String[]args){
+        Etudiant etudiant1= new Etudiant(6,"motez mhadhbi",(double)19.99);
+        Etudiant etudiant2= new Etudiant(1,"mariem tarifa",(double)20);
+        System.out.println(etudiant1.tostring());
+        System.out.println(etudiant2.tostring());
+
+
+        ing ingenieur= new ing(1, "Motaz",16.0, "Hp","Nasa");
+        System.out.println(ingenieur.tostring());
+
+
+        lmd l1=new lmd(4, "Motaz", 14, "fnasa");
+        System.out.println(l1.tostring());
+
+
+}
+}
